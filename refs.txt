@@ -1,0 +1,36 @@
+https://github.com/choo/etlcdb-image-extractor/blob/master/charset_data/JIS0208.TXT
+https://en.wikipedia.org/wiki/JIS_X_0208
+https://en.wikipedia.org/wiki/JIS_X_0201
+http://charset.7jp.net/jis0208.html
+https://www.unicode.org/Public/MAPPINGS/OBSOLETE/EASTASIA/JIS/JIS0208.TXT
+
+https://pytorch.org/tutorials/beginner/blitz/cifar10_tutorial.html
+
+https://pypi.org/project/torchinfo/
+
+https://discuss.pytorch.org/t/how-to-split-test-and-train-data-keeping-equal-proportions-of-each-class/21063/7
+
+https://www.tensorflow.org/text/tutorials/transformer#the_feed_forward_network
+
+https://medium.com/@brianpulfer/vision-transformers-from-scratch-pytorch-a-step-by-step-guide-96c3313c2e0c
+https://towardsdatascience.com/implementing-visualttransformer-in-pytorch-184f9f16f632
+https://github.com/pytorch/vision/blob/main/torchvision/models/vision_transformer.py
+
+https://stackoverflow.com/questions/61647207/how-to-extract-patches-from-an-image-in-pytorch
+
+https://pytorch.org/docs/stable/generated/torch.nn.Unfold.html
+
+https://stackoverflow.com/questions/42703500/how-do-i-save-a-trained-model-in-pytorch
+
+https://stackoverflow.com/questions/37584977/translate-image-using-pil
+
+https://arxiv.org/pdf/2010.11929.pdf
+
+https://github.com/tqdm/tqdm
+
+https://github.com/Ainimal/trans_attention_vis
+https://github.com/hila-chefer/Transformer-Explainability
+https://github.com/hila-chefer/Transformer-MM-Explainability
+
+G ending are the 04 bit grayscale.
+B ending are the 01 bit binary.

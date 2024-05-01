@@ -1,0 +1,43 @@
+len(classes) = 3040
+
+vit_v2: best val_acc = 73.518% _model_vit_2_73.518%
+ - >100 epochs
+ - cosineannealing(0.050, 0.020, 10 steps)
+ - momentum 0.9
+ - params:
+    _patch_size = 16, _num_classes = len(classes), _img_size = 128,
+    _hidden_dim = 512, _num_heads = 16, _hidden_dim_mult = 4, _num_encoder_layer = 8
+=======================================================================================================
+vit_v2_1: best val_acc = 75.991% @ 161 _v2_model_vit_161_75.991%
+ - cosineannealing(0.06, 0.02, 12 steps) till epoch 89
+ - Exponential(0.06, 0.96) starting from 90+
+ - params:
+    _patch_size = 16, _num_classes = len(classes), _img_size = 128,
+    _hidden_dim = 512, _num_heads = 16, _hidden_dim_mult = 4, _num_encoder_layer = 8
+ call:
+    models.VITNet_v2(_patch_size = 16, _num_classes = len(classes), _img_size = 128,
+                 _hidden_dim = 512, _num_heads = 16, _hidden_dim_mult = 4, _num_encoder_layer = 8)
+=======================================================================================================
+vit_v3_1: best val_acc = 88.036% @ 99 _v3_1_model_vit_99_88.036%
+ - SGD Optimizer(lr=0.050, momentum=0.9, weight_decay=0)
+   - Linear(start_factor=0.2, end_factor=1.00, total_iters=7) where epoch <= 70
+   - Linear(start_factor=1.0, end_factor=0.04, total_iters=20) where epoch > 70
+ - Augmentation:
+   - Transforms
+      v2.RandomAffine(degrees=0, scale=(0.6,1.6), interpolation=v2.InterpolationMode.NEAREST, fill=255),
+      v2.RandomAffine(degrees=(-10,10), translate=(0.2,0.2), interpolation=v2.InterpolationMode.NEAREST, fill=255),
+      v2.RandomPerspective(distortion_scale=0.3, p=0.15, interpolation=v2.InterpolationMode.NEAREST, fill=255)
+   - Random Noise
+ - params: 52,855,904 T 33,280 NT
+    _patch_size = 16, _num_classes = len(classes), _img_size = 128,
+    _hidden_dim = 512, _num_heads = 16, _hidden_dim_mult = 4, _num_encoder_layer = 12
+=======================================================================================================
+vit_v4_1: In Training Best Val: '_v4_1_model_vit_72_86.942%.pth'
+ - params: 83,256,400 T 41,600 NT
+   vit_net = models.VITNet_v4(_patch_size = 16, _num_classes = len(classes), _img_size = 128,
+   _hidden_dim = 640, _num_heads = 16, _hidden_dim_mult = 4, _num_encoder_layer = 12)
+=======================================================================================================
+vit_v4_2: In Training Best Val: '_vit_4-2_34_86.95%_49.2%.pth'
+ - params: 120,378,720 T 49,920 NT
+   vit_net = models.VITNet_v4(_patch_size = 16, _num_classes = len(classes), _img_size = 128,
+   _hidden_dim = 768, _num_heads = 16, _hidden_dim_mult = 4, _num_encoder_layer = 12)
