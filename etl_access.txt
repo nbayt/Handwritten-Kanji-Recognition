@@ -1,5 +1,0 @@
-The ETL Character Database can be downloaded from this URL:
-
-http://etlcdb.db.aist.go.jp/ramanq6nejhexcmzz6vg7iukmke
-
-Password for this page is "ElectrotechnicalLab".
