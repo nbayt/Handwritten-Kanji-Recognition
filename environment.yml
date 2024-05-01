@@ -1,0 +1,14 @@
+name: csc761projectcuda
+channels:
+  - defaults
+dependencies:
+  - pytorch
+  - pytorch-cuda=11.8
+  - torchaudio
+  - torchvision
+  - notebook
+  - torchinfo
+  - matplotlib
+  - scikit-learn
+  - tqdm
+prefix: C:\Users\nickb\anaconda3\envs\csc761projectcuda
